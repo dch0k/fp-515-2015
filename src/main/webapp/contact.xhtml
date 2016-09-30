@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+
+    </h:head>
+    <h:body style="background-image: url(resources/img/dataimg.jpg); background-size:cover" >  
+        <button onclick="goBack()" style="float: left">HOME</button><br></br>
+       <div> <h2>CONTACT US</h2></div>
+        <script>
+            function myFunction() {
+                alert("Thank you! We have received your message.");
+            }
+            
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+         <div style="alignment-adjust: central">
+<form action="#" method="post" >
+            Name<br></br>
+            <input type="text" name="cf_name"></input><br></br>
+            E-mail<br></br>
+            <input type="text" name="cf_email"></input><br></br>
+            Message<br></br>
+            <textarea name="cf_message" cols="50" rows="10"></textarea><br></br>
+            <button onclick="myFunction()">SEND</button>
+            <input type="reset" value="Clear"></input>
+        </form>
+              </div>
+       <div style="position: relative; text-align: center">
+            <p style="position: fixed; bottom: 0; width:100%; font-size: smaller">  &copy;cdara  Mondo Data Survey</p>
+        </div>
+    </h:body>
+</html>

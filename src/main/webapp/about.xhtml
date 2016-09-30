@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <style>
+            #header {
+                background-color: cornflowerblue;
+                color:white;
+                text-align:center;
+                padding:5px;
+            }
+            #para{
+                background-color: highlight;
+                color:white;
+                text-align: justify;
+                padding:5px;
+            }
+            #nav {
+                line-height:25px;
+                background-color:#eeeeee;
+                height:300px;
+                width:100px;
+                float:left;
+                padding:5px; 
+            }
+            #section {
+
+                float:left;
+                padding:10px; 
+            }
+            
+        </style>
+
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </h:head>
+    <h:body style="background-image: url(resources/img/dataimg.jpg); background-size:cover" >  
+        <div id="header" >
+            <h1>About</h1>
+            <button onclick="goBack()" style="float: left">HOME</button>
+        </div>
+        <div id="section" >      <h3>
+                <p id="para">In this modern technology world every retail company tracks their 
+                    performance and service based on the customer satisfaction. 
+                    The best way is by conducting a survey to know about customer 
+                    buying behavior and following market trends. Eventually 
+                    we need data to perform analytics on product sales. 
+                    To gather data a web application designed to register a
+                    customer, and then uploading their monthly bank statements 
+                    of credit card and debit card purchases.
+                    This web application will only generate a data collection model and 
+                    in turn rewards points are awarded for every upload of statement file. 
+                    I have labeled this project as “Mondo Data”, here Mondo (adj.) means big</p>
+            </h3>
+
+        </div>
+       <div style="position: relative; text-align: center">
+      <p style="position: fixed; bottom: 0; width:100%; font-size: smaller">  &copy;cdara  Mondo Data Survey</p>
+       </div>
+    </h:body>
+</html>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+     <cc:interface>
+        <cc:attribute name="paneldetails" type="edu.iit.sat.itmd4515.cdara.fp.domain.Paneldetails" required="true" />
+        <cc:attribute name="readonly" type="java.lang.Boolean" required="false" default="true" />
+        <cc:attribute name="action" required="false" method-signature="java.lang.String action()" />
+    </cc:interface>
+  <cc:implementation>
+<h:form>
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="id" value="Panel ID   #{cc.attrs.paneldetails.id}" style=" font-size: large ; color: dodgerblue" />
+                <h:inputHidden id="id" value="#{cc.attrs.paneldetails.id}" />
+            </h:panelGroup>
+          
+            
+<h:panelGroup layout="block" class="form-group">
+               <h:outputLabel for="firstName" value="First Name" />
+                <h:inputText class="form-control" id="firstName" value="#{cc.attrs.paneldetails.firstName}" style="width: 300px; padding-left: 1px;"/>
+                <h:message for="firstName" style="color: red"/>
+            </h:panelGroup>
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="lastName" value="Last Name"/>
+                <h:inputText class="form-control" id="lastName" value="#{cc.attrs.paneldetails.lastName}" style="width: 300px; padding-left: 1px;"/>
+                <h:message for="lastName" style="color: red"/>
+            </h:panelGroup>
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="dateofBirth" value="Date of Birth"/>
+                <h:inputText class="form-control" id="dateofBirth" value="#{cc.attrs.paneldetails.dateOfBirth}" style="width: 300px; padding-left: 1px;">
+                    <f:convertDateTime type="date" dateStyle="short"/>
+                </h:inputText>
+                <h:message for="dateofBirth" style="color: red"/>
+                    </h:panelGroup>
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="address" value="Address"/>
+                <h:inputText class="form-control" id="address" value="#{cc.attrs.paneldetails.address}" style="width: 300px; padding-left: 1px;"/>
+                <h:message for="address" style="color: red"/>
+            </h:panelGroup>
+                
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="annualIncome" value="Annual Income"/>
+                <h:inputText class="form-control" id="annualIncome" value="#{cc.attrs.paneldetails.annualIncome}" style="width: 300px; padding-left: 1px;"/>
+                <h:message for="annualIncome" style="color: red"/>
+             </h:panelGroup>
+                    
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="email" value="Email"/>
+                <h:inputText class="form-control" id="email" value="#{cc.attrs.paneldetails.email}" style="width: 300px; padding-left: 1px;"/>
+                <h:message for="email" style="color: red"/>
+             </h:panelGroup>
+                       
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="phone" value="Phone"/>
+                <h:inputText class="form-control" id="phone" value="#{cc.attrs.paneldetails.phone}" style="width: 300px; padding-left: 1px;"/>
+                <h:message for="phone" style="color: red"/>
+             </h:panelGroup>
+            
+            
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="state" value="State"/>
+                <h:inputText class="form-control" id="state" value="#{cc.attrs.paneldetails.state}" style="width: 300px; padding-left: 1px;"/>
+                <h:message for="state" style="color: red"/>
+             </h:panelGroup>
+            
+            <h:panelGroup layout="block" class="form-group">
+                <h:outputLabel for="zip" value="Zip"/>
+                <h:inputText class="form-control" id="zip" value="#{cc.attrs.paneldetails.zip}" style="width: 100px; padding-left: 1px;"/>
+                <h:message for="zip" style="color: red"/>
+             </h:panelGroup>
+            <h:commandButton action="#{cc.attrs.action}" value="Save" rendered="#{not cc.attrs.readonly}" />
+        </h:form>
+     </cc:implementation>
+     <div style="position: relative; text-align: center">
+      <p style="position: fixed; bottom: 0; width:100%; font-size: smaller">  &copy;cdara  Mondo Data Survey</p>
+        </div>
+</html>

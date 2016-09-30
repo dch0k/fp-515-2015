@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://java.sun.com/jsf/facelets"
+      
+       xmlns:h="http://java.sun.com/jsf/html">
+     <h:body>
+       <ui:composition>
+           <h:form>
+              <fieldset><legend>Enter Registration Information</legend>
+                 <ul>
+                    <li>
+                         <h:outputLabel for="Firstname" value="First Name: "/>
+                         <h:inputText id="firstname"
+                                      value="#{assistantController.paneldetails.firstName}"/>
+                     </li>
+                     <li>
+                        <h:outputLabel for="lname" value="Last Name: "/>
+                        <h:inputText id="lname"
+                                     value="#{assistantController.paneldetails.lastName}"/>
+                     </li>
+                     <li>
+                        <h:outputLabel for="email"
+                           value="Email Address: " />
+                         <h:inputText id="email"
+                                      value="#{assistantController.paneldetails.email}"/>
+                     </li>
+                </ul>
+                <p>                   <h:commandButton value="Submit"
+                                                       action="#{assistantController.doCreatePaneldetails()}"
+                        style="margin-left:35px;" />
+               </p>
+              </fieldset>
+          </h:form>
+        </ui:composition>
+   </h:body>
+</html>
